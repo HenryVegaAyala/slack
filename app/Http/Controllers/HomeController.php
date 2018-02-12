@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Maknz\Slack\Facades\Slack;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('accion');
     }
 
     /**
@@ -25,5 +26,12 @@ class HomeController extends Controller
     {
 
         return view('home');
+    }
+
+
+    public function accion()
+    {
+        Slack::send(' Hello world! ');
+        logger('ok');
     }
 }

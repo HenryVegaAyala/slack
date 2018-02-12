@@ -77,6 +77,8 @@
                 </div>
             @endif
 
+                <a href="{{ route('accion') }}">Mandar Mensaje</a>
+
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
