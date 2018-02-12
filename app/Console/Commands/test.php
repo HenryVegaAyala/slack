@@ -39,7 +39,7 @@ class test extends Command
     public function handle()
     {
         Slack::to('#test')->send('Soy un bot de procesos');
-        Slack::to('@henryvega ')->send('Yo! este proceso funciona ok');
+        Slack::to('@cainzer0')->send('Yo! este proceso funciona ok');
         logger('ok');
     }
 }
