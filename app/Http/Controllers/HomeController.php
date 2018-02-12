@@ -33,5 +33,6 @@ class HomeController extends Controller
     {
         Slack::send(' Hello world! ');
         logger('ok');
+        return redirect()->home();
     }
 }
