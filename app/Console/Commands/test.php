@@ -38,7 +38,8 @@ class test extends Command
      */
     public function handle()
     {
-        Slack::to('#test')->send('Are we rich yet?');
+        Slack::to('#test')->send('Soy un bot de procesos');
+        Slack::to('@henryvega ')->send('Yo! este proceso funciona ok');
         logger('ok');
     }
 }
