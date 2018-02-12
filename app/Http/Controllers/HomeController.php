@@ -24,15 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        Slack::to('#test')->send('Are we rich yet?');
         return view('home');
     }
 
 
     public function accion()
     {
-        Slack::send(' Hello world! ');
+        Slack::to('#test')->send('Are we rich yet?');
         logger('ok');
-        return redirect()->home();
+        return view('home');
     }
 }
